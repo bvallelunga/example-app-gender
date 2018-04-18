@@ -8,6 +8,18 @@ from keras.preprocessing.image import img_to_array
 
 def preprocess(img, target_size):
     """Preprocess the image for model prediction."""
+    # Crop img to square with dim = min(height, width)
+    half_min_dim = min(img.size) / 2
+    half_width, half_height = map(lambda dim: dim / 2, img.size)
+
+    img = img.crop(
+        (
+            half_width - half_min_dim,
+            half_height - half_min_dim,
+            half_width + half_min_dim,
+            half_height + half_min_dim
+        )
+    )
     # Greyscale and resize
     img = img.convert('L').resize(target_size)
     # Feature scale

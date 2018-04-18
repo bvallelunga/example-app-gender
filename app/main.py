@@ -10,6 +10,7 @@ MODEL_PATH = os.path.join(BASE_PATH, 'gender_mini_XCEPTION.21-0.95.hdf5')
 LABELS = ('woman', 'man')
 SCORE_PRECISION = 2
 
+
 class ModelInterface(object):
     def __init__(self, model=None):
         if model is None:
