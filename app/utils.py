@@ -33,5 +33,5 @@ def preprocess(img, target_size):
 
 def base64_to_img(string):
     """Convert a base64 encoded string to an image."""
-    img_buffer = BytesIO(base64.b64decode(string.encode()))
+    img_buffer = BytesIO(base64.b64decode(string.encode(), validate=True))
     return Image.open(img_buffer)

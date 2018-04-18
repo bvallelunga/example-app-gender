@@ -44,3 +44,19 @@ class TestModelInterface(unittest.TestCase):
         """The scores must have the correct precision."""
         scores = self.interface.predict({'face': IMG})['scores']
         self.assertTrue(all(score == round(score, SCORE_PRECISION) for score in scores.values()))
+
+    def test_face_is_not_a_string(self):
+        """'face' must be a string."""
+        with self.assertRaises(ValueError):
+            self.interface.predict({'face': []})
+
+    def test_face_is_not_base64_encoded(self):
+        """'face' must be a base64 encoded string."""
+        with self.assertRaises(ValueError):
+            self.interface.predict({'face': '<'})
+
+    def test_face_is_too_small(self):
+        """'face' can not be smaller than the model's expected input size."""
+        with self.assertRaises(ValueError):
+            img = img_to_base64(os.path.join(BASE_PATH, 'test_small.jpg'))
+            self.interface.predict({'face': img})
