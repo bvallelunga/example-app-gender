@@ -1,9 +1,12 @@
+import os
 import unittest
+
 import keras.models
+
 from app.main import MODEL_PATH
 from app.main import ModelInterface
+from app.main import SCORE_PRECISION
 from .utils import img_to_base64
-import os
 
 MODEL = keras.models.load_model(MODEL_PATH)
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -37,3 +40,7 @@ class TestModelInterface(unittest.TestCase):
         scores = self.interface.predict({'face': IMG})['scores']
         self.assertTrue(all(isinstance(score, float) for score in scores.values()))
 
+    def test_scores_have_correct_precision(self):
+        """The scores must have the correct precision."""
+        scores = self.interface.predict({'face': IMG})['scores']
+        self.assertTrue(all(score == round(score, SCORE_PRECISION) for score in scores.values()))
