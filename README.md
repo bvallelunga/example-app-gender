@@ -9,7 +9,7 @@ Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB
 The input should contain a base64 encoded image of a face. 
 ``` json
 {
-  "face": "aGVsbG8gZnJvbSB0aGUgb3RoZXJzaWRl"
+  "face": "BASE_64_ENCODED_IMAGE"
 }
 ```
 
