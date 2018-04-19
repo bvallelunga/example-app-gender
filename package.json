@@ -10,7 +10,8 @@
     "image": "string"
   },
   "output_scheme": {
-    "scores": "object"
+    "woman": "number",
+    "man": "number"
   },
   "license": "Apache License",
   "dependencies": [

@@ -31,4 +31,4 @@ class ModelInterface(object):
 
         img = preprocess(img, self.model.input_shape[1:3])
         scores = self.model.predict(img).tolist()[0]
-        return {'scores': {label: round(score, SCORE_PRECISION) for label, score in zip(LABELS, scores)}}
+        return {label: round(score, SCORE_PRECISION) for label, score in zip(LABELS, scores)}

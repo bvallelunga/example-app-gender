@@ -19,12 +19,9 @@ scores.
  
 ``` json
 {
-  "scores": 
-    {
-      "woman": 0.91,
-      "man": 0.09
-    }
- }
+  "woman": 0.91,
+  "man": 0.09
+}
 ```
 
 

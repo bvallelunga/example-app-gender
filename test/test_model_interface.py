@@ -20,29 +20,24 @@ class TestModelInterface(unittest.TestCase):
     def tearDown(self):
         self.interface = None
 
-    def test_output_has_scores_key(self):
-        """The output dict must have a 'scores' key."""
-        result = self.interface.predict({'image': IMG})
-        self.assertIn('scores', result)
-
     def test_scores_has_woman_key(self):
         """The scores dict must have a 'woman' key."""
-        scores = self.interface.predict({'image': IMG})['scores']
+        scores = self.interface.predict({'image': IMG})
         self.assertIn('woman', scores)
 
     def test_scores_has_man_key(self):
         """The scores dict must have a 'man' key."""
-        scores = self.interface.predict({'image': IMG})['scores']
+        scores = self.interface.predict({'image': IMG})
         self.assertIn('man', scores)
 
     def test_scores_are_floats(self):
         """The score values must be floats."""
-        scores = self.interface.predict({'image': IMG})['scores']
+        scores = self.interface.predict({'image': IMG})
         self.assertTrue(all(isinstance(score, float) for score in scores.values()))
 
     def test_scores_have_correct_precision(self):
         """The scores must have the correct precision."""
-        scores = self.interface.predict({'image': IMG})['scores']
+        scores = self.interface.predict({'image': IMG})
         self.assertTrue(all(score == round(score, SCORE_PRECISION) for score in scores.values()))
 
     def test_image_is_not_a_string(self):
