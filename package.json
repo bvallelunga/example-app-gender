@@ -7,7 +7,7 @@
   "website": "https://github.com/oarriaga/face_classification",
   "repository": "https://github.com/DopplerFoundation/example-app-gender",
   "input_scheme": {
-    "face": "string"
+    "image": "string"
   },
   "output_scheme": {
     "scores": "object"
