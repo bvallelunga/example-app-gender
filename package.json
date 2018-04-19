@@ -13,12 +13,5 @@
     "woman": "number",
     "man": "number"
   },
-  "license": "Apache License",
-  "dependencies": [
-    "numpy",
-    "h5py",
-    "keras",
-    "tensorflow",
-    "pillow"
-  ]
+  "license": "Apache License"
 }
