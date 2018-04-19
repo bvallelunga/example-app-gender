@@ -30,5 +30,9 @@ class ModelInterface(object):
             raise ValueError("'image' can not have a height or width less than {} pixels.".format(min_dim))
 
         img = preprocess(img, self.model.input_shape[1:3])
-        scores = self.model.predict(img).tolist()[0]
-        return {label: round(score, SCORE_PRECISION) for label, score in zip(LABELS, scores)}
+        woman_score, _ = self.model.predict(img).tolist()[0]
+        woman_score = round(woman_score, SCORE_PRECISION)
+        return {
+            'woman': woman_score,
+            'man': round(1. - woman_score, SCORE_PRECISION)
+        }
