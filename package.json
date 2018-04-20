@@ -1,5 +1,5 @@
 {
-  "name": "Gender",
+  "name": "Image Gender Classification",
   "slug": "gender",
   "keywords": "gender classification computer vision face",
   "description": "Quickly determine the gender of a face. Trained on hundreds of thousands of imdb images.",
