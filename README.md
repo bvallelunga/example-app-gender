@@ -1,10 +1,12 @@
 # Gender
-Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB images."
+Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB images.
 
 **Possible Use Cases**
   * Adding gender classification to a face detection system
   * Targeted messaging to your users based on their gender/interests
     * Especially useful if you do not ask what a users gender is during registration
+  * Automated filter recommendations on image messaging apps like Instagram
+  * Smart tagging in photo gallery apps
   * Categorizing profiles from social networks by gender
 
 
