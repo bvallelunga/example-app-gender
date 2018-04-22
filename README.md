@@ -1,5 +1,5 @@
 # Gender
-Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB images."
+Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB images.
 
 **Possible Use Cases**
   * Adding gender classification to a face detection system
