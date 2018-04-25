@@ -4,7 +4,6 @@
   "keywords": "gender classification computer vision face",
   "description": "Quickly determine the gender of a face. Trained on hundreds of thousands of imdb images.",
   "main": "app/main.py",
-  "website": "https://github.com/oarriaga/face_classification",
   "repository": "https://github.com/DopplerFoundation/example-app-gender",
   "input_scheme": {
     "image": "string"
