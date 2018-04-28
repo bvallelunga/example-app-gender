@@ -12,5 +12,12 @@
     "woman": "number",
     "man": "number"
   },
+  "input_example": {
+    "image": "https://s3-us-west-1.amazonaws.com/doppler-production/production/public/male_face.png"
+  },
+  "output_example": {
+    "woman": 0.1,
+    "man": 0.9
+  },
   "license": "Apache License"
 }
