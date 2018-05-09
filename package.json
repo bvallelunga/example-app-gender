@@ -6,14 +6,15 @@
   "main": "app/main.py",
   "repository": "https://github.com/DopplerFoundation/example-app-gender",
   "input_scheme": {
-    "image": "string"
+    "image_base64": "string",
+    "image_url": "string"
   },
   "output_scheme": {
     "woman": "number",
     "man": "number"
   },
   "input_example": {
-    "image": "https://s3-us-west-1.amazonaws.com/doppler-production/production/public/male_face.png"
+    "image_url": "https://s3-us-west-1.amazonaws.com/doppler-production/production/public/male_face.png"
   },
   "output_example": {
     "woman": 0.1,

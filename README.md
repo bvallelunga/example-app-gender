@@ -11,11 +11,17 @@ Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB
 
 
 ## Input Scheme
-The input should contain a base64 encoded image of a face. The image must be at least 
+The input should contain a base64 encoded image or image url of a face. The image must be at least 
 64 x 64 pixels. In order to get the best results, make sure your input image is a tight face shot.
 ``` json
 {
-  "image": "BASE_64_ENCODED_IMAGE"
+  "image_base64": "BASE_64_ENCODED_IMAGE"
+}
+```
+or
+``` json
+{
+  "image_url": "IMAGE_URL"
 }
 ```
 
