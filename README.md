@@ -11,11 +11,17 @@ Quickly determine the gender of a face. Trained on hundreds of thousands of IMDB
 
 
 ## Input Scheme
-The input should contain a base64 encoded image of a face. The image must be at least 
+The input should contain a base64 encoded image or image url of a face. The image must be at least 
 64 x 64 pixels. In order to get the best results, make sure your input image is a tight face shot.
 ``` json
 {
-  "image": "BASE_64_ENCODED_IMAGE"
+  "image_base64": "BASE_64_ENCODED_IMAGE"
+}
+```
+or
+``` json
+{
+  "image_url": "IMAGE_URL"
 }
 ```
 
@@ -34,4 +40,9 @@ the model is that the person is of that gender.
 The model was trained by the [B-IT-BOTS robotics team][1] on over 500,000 IMDB images. 
 
 
+## Want To Learn More?
+See the [MAINTAINERS.md][2] to learn more about the underlying model as well as how to contribute to the app.
+
+
 [1]: https://mas-group.inf.h-brs.de/?page_id=622
+[2]: https://github.com/DopplerFoundation/example-app-gender/blob/master/MAINTAINERS.md
