@@ -3,11 +3,11 @@ import binascii
 
 import keras.models
 
-from .utils import base64_to_img
-from .utils import preprocess
+from app.utils import base64_to_img
+from app.utils import preprocess
 
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_PATH, 'gender_mini_XCEPTION.21-0.95.hdf5')
+MODEL_PATH = os.path.join(BASE_PATH, 'app/gender_mini_XCEPTION.21-0.95.hdf5')
 LABELS = ('woman', 'man')
 SCORE_PRECISION = 2
 
